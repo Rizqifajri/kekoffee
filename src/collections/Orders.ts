@@ -148,5 +148,21 @@ export const Orders: CollectionConfig = {
       type: 'textarea',
       required: false,
     },
+    {
+      name: 'paymentstatus',
+      label: 'Payment Status',
+      type: 'select',
+      options: [
+        {
+          label: 'Paid',
+          value: 'paid',
+        },
+        {
+          label: 'Unpaid',
+          value: 'unpaid',
+        },
+      ],
+      defaultValue: 'unpaid',
+    },
   ],
 }

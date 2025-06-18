@@ -9,6 +9,7 @@ interface Order {
   name?: string
   status: string
   table?: string
+  paymentstatus?: string
 }
 
 export default function OrderStatus() {
@@ -64,6 +65,7 @@ export default function OrderStatus() {
           <p className="text-gray-600">Nomor Pesanan Anda:</p>
           <p className="text-lg font-bold text-gray-900">{order.id}</p>
           {order.name && <p className="text-sm text-gray-500">Atas nama: {order.name}</p>}
+          <p>Status Pembayaran : <span className="text-lg font-bold text-gray-900">{order.paymentstatus}</span></p>
         </div>
 
         <div className="flex flex-col items-center justify-center space-y-2 mb-6">

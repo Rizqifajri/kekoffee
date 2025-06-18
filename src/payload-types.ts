@@ -186,6 +186,7 @@ export interface Order {
   type: 'dine-in' | 'takeaway';
   payment: 'cash' | 'ewallet';
   notes?: string | null;
+  paymentstatus?: ('paid' | 'unpaid') | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -331,6 +332,7 @@ export interface OrdersSelect<T extends boolean = true> {
   type?: T;
   payment?: T;
   notes?: T;
+  paymentstatus?: T;
   updatedAt?: T;
   createdAt?: T;
 }
