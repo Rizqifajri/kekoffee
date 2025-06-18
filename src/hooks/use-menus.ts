@@ -42,6 +42,8 @@ export function useMenu() {
         // params.append('filter[category]', category)
       }
 
+      params.append('where[available][equals]', 'true')
+
       // Tambahan parameter yang berguna
       params.append('limit', '50') // Batasi hasil
       params.append('sort', 'name') // Urutkan hasil
